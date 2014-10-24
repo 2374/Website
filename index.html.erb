@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<style>
+.navbox a, #more a {
+text-decoration:none;
+color:white;
+}
+a:hover, #more a:hover{
+color:rgba(49, 180, 4, 0.59);
+font-color:black;
+}
+.bg{
+width:100%;
+top: 25%;
+position: fixed;
+z-index:-1;
+}
+.info{
+margin-left: 25%;
+margin-right:25%;
+color:black;
+padding:10px;
+background-color:#eeeeee;
+top:50%;
+font-family:'sans serif';
+position:absolute;
+}
+.info img{
+
+margin-left:2.5%;
+}
+#logo{/*Original size: 237x199*/
+position: absolute;
+height:110px;
+width: 125px;
+z-index:101;
+background-color: rgb(255,255,255);
+background-color: rgba(255,255,255, 0);
+margin-left:8px;
+margin-top:0px;
+clear:both;
+border:0px;
+}
+#navbar{
+position:fixed;
+width:500px;
+height: 110px;
+/*margin:0px;*/
+border-top:-10px;
+border-left:-10px;
+z-index:100;
+font-family:"sans-serif";/*46,75,45*/
+background-color:rgba(49, 180, 4, 0.59);
+}
+.navbox{
+position:fixed;
+font-size:20px;
+margin-left:180px;
+float:left;
+background-color:rgba(49, 180, 4, 0.59);
+}
+.navbox:hover{
+z-index:102;
+background-color:white;
+}
+#more{
+position:absolute;
+top:0px;
+left:30;
+margin-left:300px;
+margin-top:0px;
+}
+</style>
+</head>
+<body>
+<img src=FIRST_horz.gif class=bg>
+<script>
+function moreOptions(s){
+
+var text;
+switch(s){
+case 1:
+text="<a href=/about>about the team</a><br><a href=www.facebook.com/crusaderbots>team facebook</a><br><a href=/first> about FIRST </a><br><a href=www.usfirst.org>FIRST website</a>"
+break;
+case 2: 
+text="<a href=/departments>departments</a><br><a href=/projets>projects</a><br><a href=/history>history</a>"
+break;
+case 3:
+text="<a href=/2015bot>{name undecided}</a><br><a href=/2014bunny>Bunny bots</a><br><a href=/history>past robots</a>"
+break;
+case 4:
+text="<a href=/calendar>calendar</a><br><a href=/rss>rss</a><br><a href=/history>history</a>"
+break;
+case 5: 
+text="<a href=/departments>departments</a><br><a href=/projets>projects</a><br><a href=/history>history</a>"
+break;
+default:
+text="";
+break;
+}
+
+document.getElementById("more").innerHTML = text;
+}
+</script>
+<div id=navbar onmouseleave="moreOptions(0)">
+<div><a href=http://www.jesuitportland.org><img src=jhs_white.png id=logo ></a></div>
+<div class=navbox onmouseover="moreOptions(1)"><a href=/about >about</a></div><br>
+<div class=navbox onmouseover="moreOptions(2)"><a href=/about >the team</a></div><br>
+<div class=navbox onmouseover="moreOptions(3)"><a href=/about >robots</a></div><br>
+<div class=navbox onmouseover="moreOptions(4)"><a href=/about >news</a></div><br>
+<div class=navbox onmouseover="moreOptions(5)"><a href=/about >archive</a></div><br>
+<div id=more></div>
+</div>
+
+
+
+<div class=info>
+The Crusaderbots are a high school robotics team in Portland, OR competing in the FIRST (For Inspiration and Recognition of Science and Technology) Robotics Competition. FIRST announces a new game every year in January and challenges teams to build a robot to play for the game. Through six intense weeks, we meet in the Jesuit High School Robotics Lab located in the new Elorriaga Center for Science and Mathematics. To learn more about the team <a href=/about >click here</a>.
+
+<img src=team.jpg>
+</div>
+<div id=scrolly>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+.
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+</html>
